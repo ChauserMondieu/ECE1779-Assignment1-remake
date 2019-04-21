@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/logout_page.css">
+</head>
+<center>
+ <body style="background-image: url('/static/picture/BackGround.jpg');">
+<div class="whole_frame">
+    <div class="upper_frame">
+        <span>Welcome to Face Detection</span>
+    </div>
+    <div class="middle_frame">
+        <div class="login_form_frame">
+            <div class="avatar">
+                <img src="/static/picture/logo.jpg" alt="webpage logo" class="webpage_logo">
+            </div>
+            <div class="title">
+                Log Out
+            </div>
+            <div class="container">
+                {% for message in get_flashed_messages() %}
+                {{ message }}
+                {% endfor %}
+                {% block page_content %}{% endblock %}
+            </div>
+            <span class="label">
+                You're successfully logged out!
+            </span>
+            <div class="bottom_line">
+                <span id="no_account">
+                    <a href = "{{ url_for('welcome_function') }}">Back to Login page</a>
+                </span>
+            </div>
+        </div>
+        <div class="show_form">
+            <div class="pic1">
+                <img src="/static/picture/picture-wall-book1.jpg" alt="cats"
+                     style="max-width:80px;max-height:80px;">
+            </div>
+            <div class="pic2">
+                <img src="/static/picture/picture-wall-cat.jpg" alt="cats"
+                     style="max-width:80px;max-height:80px;">
+            </div>
+            <div class="pic3">
+                <img src="/static/picture/picture-wall-book2.jpg" alt="cats"
+                     style="max-width:80px;max-height:80px;">
+            </div>
+            <div class="pic4">
+                <img src="/static/picture/picture-wall-book3.jpg" alt="cats"
+                     style="max-width:80px;max-height:80px;">
+            </div>
+            <div class="pic5">
+                <img src="/static/picture/picture-wall-book4.jpg" alt="cats"
+                     style="max-width:80px;max-height:80px;">
+            </div>
+            <div class="pic6">
+                <img src="/static/picture/picture-wall-book5.jpg" alt="cats"
+                     style="max-width:80px;max-height:80px;">
+            </div>
+        </div>
+    </div>
+    <div class="lower_frame">
+        <span>This is the web application for face detection </span><br>
+        <span> Co-worker: Zhonghao Li, Botao Liu</span>
+    </div>
+</div>
+
+
+</body>
+</center>
+
+</html>

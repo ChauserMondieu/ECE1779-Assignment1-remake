@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Upload</title>
+</head>
+<body style="background-image: url('/static/picture/BackGround.jpg');">
+
+<h1>Upload</h1><br>
+
+<form method='POST' action="" enctype="multipart/form-data">
+    <label for="user_name">Username</label>
+    <input type="text" placeholder="Enter Username" id="user_name" name="username">
+    <label for="password">Password</label>
+    <input type="password" placeholder="Enter Password" id="password" name="password">
+    <label for="password">Password</label>
+    <input type="file" name="file">
+    <input type="submit" value="Log in">
+</form>
+
+{% block content %}
+<div class="container">
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+{% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+</body>
+</html>

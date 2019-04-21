@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detected result</title>
+    <link rel="stylesheet" type="text/css" href="/static/result_page.css">
+</head>
+<center>
+    <body style="background-image: url('/static/picture/BackGround.jpg');">
+        <div class="whole_frame">
+            <div class="nav_bar">
+                <div class="function_button">
+                    <span><a href="{{ url_for('upload_function',user_name=name)}}">picture upload</a></span>
+                </div>
+                <div class="function_button">
+                    <span><a href="{{ url_for('visit_function', user_name=name)}}">view thumbnail</a></span>
+                </div>
+                <div class="function_button">
+                    <span><a href="{{ url_for('logout_function')}}">logging out</a></span>
+                </div>
+            </div>
+            <div class="upper_frame">
+                <span>Showing the Origin and the Detected Pictures</span>
+            </div>
+            <div class="middle_frame">
+                <div class="show_personnale">
+                    <div class="show_avatar">
+                        <img src="/static/picture/logo.jpg" alt="webpage logo" class="webpage_logo">
+                    </div>
+                    <div class="show_name">
+                        <span>Welcome, {{ name }}</span>
+                    </div>
+                </div>
+                <div class="error_messages">
+                    {% for msg in get_flashed_messages() %}
+                    <p class="login-box-msg">{{ msg }}</p>
+                    {% endfor %}
+                </div>
+                <div class="show_picture">
+                    <div class="frame_picture">
+                        <div class="picture_text">
+                            <span>Original photo：</span>
+                        </div>
+                        <div class="picture_content">
+                            <img class="pictures" src="{{ raw_photo_address }}" alt = "Error">
+                        </div>
+                    </div>
+                    <div class="frame_picture">
+                        <div class="picture_text">
+                            <span>Detected photo:</span>
+                        </div>
+                        <div class="picture_content">
+                            <img class="pictures" src="{{ faced_detected_picture }}" alt = "Error">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower_frame">
+                <span>This is the web application for face detection </span><br>
+                <span> Co-worker: Zhonghao Li, Botao Liu</span>
+            </div>
+        </div>
+    </body>
+</center>
+</html>

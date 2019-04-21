@@ -1,0 +1,35 @@
+.whole_frame{display:flex;flex-wrap:nowrap;flex-direction:column;justify-content:flex-start;
+height:100%;width:1000px;}
+    .nav_bar{display:flex;flex-wrap:nowrap;flex-direction:row;justify-content:center;align-items:center;
+    height:50px;width:800px;text-align: center;background-color:rgba(227%,239%,255%,0.3);}
+        .function_button{height:24px;width:150px;font-size:18px;font-weight:600;margin-top:4px;
+            text-align:center;background-color: rgba(147, 147, 147, 0.3);border-radius:12px;
+            color:rgba(49, 61, 83, 0.8);}
+
+    .upper_frame{height:40px;width:800px;margin-top:15px;margin-bottom:15px;line-height:40px;
+        background-color: rgba(227%,239%,255%,0.3);font-size:28px;font-weight:900;
+        text-align:center;color: rgba(49, 61, 83, 0.8);}
+
+    .middle_frame{display:flex;flex-wrap:nowrap;flex-direction:column;justify-content:center;
+    height:100%;width:800px;text-align:center;background-color:rgba(227%,239%,255%,0.3);}
+        .show_personnale{display:flex;flex-wrap:nowrap;flex-direction:column;justify-content:center;
+        align-items:center;height:145px;width:800px;margin:10px 0;}
+            .show_avatar{width:60%;height:60px;text-align:center;margin:10px 0}
+                .webpage_logo{max-width:55px;max-height:55px;border-radius:18px;}
+            .show_name{width:60%;height:25px;text-align:center;background-color: rgba(227%,239%,255%,0.3);
+                border-radius:12px;font-size:20px;font-weight:800;color: rgba(12, 45, 70, 0.9);}
+        .error_messages{width:100%;height:15px;font-size:14px;text-align: center;}
+           .error_messages p {font-size: 12px;color: #ff2f33;text-align: center;}
+        .show_picture{display:flex;flex-wrap:nowrap;flex-direction:column;justify-content:center;
+        align-items:center;height:100%;width:800px;text-align:center;}
+            .each_picture{display:flex;flex-wrap:nowrap;flex-direction:row;justify-content:center;
+            height:120px;width:360px;text-align:center;margin:20px 30px;background-color:rgba(147, 147, 147, 0.3);
+            border:solid 1px cornflowerblue; border-radius:12px;}
+                .each_no{height:80px;width:50%;font-size:18px;font-weight:600;overflow:hidden;
+                text-align:center;color:rgba(49, 61, 83, 0.8);margin:30px 30px;}
+                .each_pic{height:80px;width:50%;margin:25px 30px;overflow:hidden;}
+                    .pic_content{max-width:100px;max-height:100px;border-radius:18px;}
+
+    .lower_frame{width:100%;height:40px;margin-top:20px;
+        font-size:14px;color:rgba(0%,35%,27%,0.9);line-height:16px;
+        text-align:center;}

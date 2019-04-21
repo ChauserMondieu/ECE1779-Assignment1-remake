@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="/static/registration_page.css">
+</head>
+<center>
+<body style="background-image: url('/static/picture/BackGround.jpg');">
+    <div class="whole_frame">
+        <div class="upper_frame">
+            <span>Ready to Start Your Image Processing Journey?</span>
+        </div>
+        <div class="middle_frame">
+            <div class="register_form_frame">
+                <div class="avatar">
+                    <img src="/static/picture/logo.jpg" alt="webpage logo" class="webpage_logo">
+                </div>
+                <div class="title">
+                    Create New Account
+                </div>
+                <form class="login_form" method='POST'>
+                    {% block content %}
+                    <div class="container">
+                        {% for message in get_flashed_messages() %}
+                        {{ message }}
+                        {% endfor %}
+                        {% block page_content %}{% endblock %}
+                    </div>
+                    {% endblock %}
+                    {{ form.hidden_tag() }}
+                    <span class="label">
+                        {{ form.name.label }}
+                    </span>
+                    <span >
+                        {{ form.name(class_="input") }}
+                    </span>
+                    <span class="label">
+                        {{ form.password.label }}
+                    </span>
+                    <span >
+                        {{ form.password(class_="input") }}
+                    </span>
+                    <span class="label">
+                        {{ form.password_check.label }}
+                    </span>
+                    <span>
+                        {{ form.password_check(class_="input") }}
+                    </span>
+                    <div class="bottom_line">
+                        <span >
+                            {{ form.submit(class_="submit_button") }}
+                        </span>
+                    </div>
+                </form>
+                <div class="bottom_line">
+                    <span id="back_login_page">
+                        <a href = "{{ url_for('welcome_function') }}">back to login page</a>
+                    </span>
+                </div>
+            </div>
+            <div class="show_form">
+                <div class="pic1">
+                    <img src="/static/picture/picture-wall-book1.jpg" alt="cats"
+                         style="max-width:80px;max-height:80px;">
+                </div>
+                <div class="pic2">
+                    <img src="/static/picture/picture-wall-cat.jpg" alt="cats"
+                         style="max-width:80px;max-height:80px;">
+                </div>
+                <div class="pic3">
+                    <img src="/static/picture/picture-wall-book2.jpg" alt="cats"
+                         style="max-width:80px;max-height:80px;">
+                </div>
+                <div class="pic4">
+                    <img src="/static/picture/picture-wall-book3.jpg" alt="cats"
+                         style="max-width:80px;max-height:80px;">
+                </div>
+                <div class="pic5">
+                    <img src="/static/picture/picture-wall-book4.jpg" alt="cats"
+                         style="max-width:80px;max-height:80px;">
+                </div>
+                <div class="pic6">
+                    <img src="/static/picture/picture-wall-book5.jpg" alt="cats"
+                         style="max-width:80px;max-height:80px;">
+                </div>
+            </div>
+        </div>
+        <div class="lower_frame">
+            <span>This is the web application for face detection </span><br>
+            <span> Co-worker: Zhonghao Li, Botao Liu</span>
+        </div>
+    </div>
+</body>
+</center>
+
+</html>

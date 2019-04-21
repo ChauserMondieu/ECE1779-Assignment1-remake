@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Upload</title>
+    <link rel="stylesheet" type="text/css" href="/static/upload_page.css">
+</head>
+<center>
+    <body style="background-image: url('/static/picture/BackGround.jpg');">
+        <div class="whole_frame">
+            <div class="nav_bar">
+                <div class="function_button">
+                    <span><a href="{{ url_for('upload_function',user_name=name)}}">picture upload</a></span>
+                </div>
+                <div class="function_button">
+                    <span><a href="{{ url_for('visit_function', user_name=name)}}">view thumbnail</a></span>
+                </div>
+                <div class="function_button">
+                    <span><a href="{{ url_for('logout_function')}}">logging out</a></span>
+                </div>
+            </div>
+            <div class="upper_frame">
+                <span>Please Upload the picture Requiring Procession</span>
+            </div>
+            <div class="middle_frame">
+                <div class="show_personnale">
+                    <div class="show_avatar">
+                        <img src="/static/picture/logo.jpg" alt="webpage logo" class="webpage_logo">
+                    </div>
+                    <div class="show_name">
+                        <span>Welcome, {{ name }}</span>
+                    </div>
+                </div>
+                <div class="error_messages">
+                    {% for msg in get_flashed_messages() %}
+                    <p class="login-box-msg">{{ msg }}</p>
+                    {% endfor %}
+                </div>
+                <div class="upload_form">
+                    <form method='POST' class="container" action="" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        <span class="label">
+                            {{ form.file.label }}
+                        </span>
+
+                        <span class="input">
+                            Upload your files{{ form.file(class_="input") }}
+                        </span>
+
+                        <div class="bottom_line">
+                            <span >
+                                {{ form.submit(class_="submit_button") }}
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="warning_message">
+                    <span>Note: only 'png', 'jpg', 'JPG', 'PNG' file are allowed!</span>
+                </div>
+            </div>
+            <div class="lower_frame">
+                <span>This is the web application for face detection </span><br>
+                <span> Co-worker: Zhonghao Li, Botao Liu</span>
+            </div>
+        </div>
+    </body>
+</center>
+</html>
