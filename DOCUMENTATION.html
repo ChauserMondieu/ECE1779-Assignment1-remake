@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOCUMENTATION</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Face Detection</h1>
+<p>Welcome to use the documentation of the face detection application. &quot;Face Detection&quot; is a program which allows users to register an account and upload a photo with a human face, feedback an original picture and a detected photo with a rectangle around human faces.</p>
+<h2>Introduction</h2>
+<p>The documentation contains <strong>User's Guide</strong> and <strong>Developer's Reference</strong>. User Guide demonstrates how to use the program for implementing face detection function. Developer's Reference explains the working principle to help other programmers understanding and upgrading the program easily.</p>
+<h2>User Guide</h2>
+<h3>Login Page</h3>
+<p>Open the browser and enter the dynamic URL <strong>Server's IPv4 address + :5000</strong> to access the login page. As a standard login page, it contains a user's name&amp;password block and a registration block. If the pair of the name and the password is correct, the browser will show the user's personal page. Else, a message will tell you the pair of the user's name and the password is wrong. If you don't have an account, please click the <strong>No account?</strong> so that the browser will show the registration page for you to register.
+<img src="https://i.imgur.com/OGsKSzH.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Login Page</h6>
+<h3>Register Page</h3>
+<p>You can access the registration page in two ways. One is by the login page and another is entering the URL <strong>Server's IPv4 address + :5000 + '/api/register'</strong> to access directly. If a name already existed, the browser will tell you that you can not use the name. Moreover, you must enter the password twice to check the password. If the registration process is successful, the page will back to the login page and you can log in and access your personal page.  </p>
+<p><img src="https://i.imgur.com/wC1sCSs.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Register Page</h6>
+<h3>Personal visit page</h3>
+<p>When you access the personal visit page for the first time, the browser will tell you that you have not uploaded the photo. Up in the Navigation bar, you could click on the &quot;picture upload&quot; button to jump to the picture uploading page where you could upload new pictures into the web application system. In the navigation bar, you could also find view thumbnail button which could lead you to the current page and the logging out button which could directly log out your current using account.</p>
+<p><img src="https://i.imgur.com/X5lmEid.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Personal Visit Page with first login</h6>
+<p><img src="https://i.imgur.com/imBsRtT.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Personal Visit Page with uploading successfully</h6>
+<h3>Upload Page</h3>
+<p>If you login your account by the login page, you can upload your photo in your personal upload page. Please note the form of your upload files could only be &quot;XX.png&quot; and &quot;XX.jpg&quot;. If you upload the invalid files such as &quot;XX.txt&quot; and &quot;XX.gif&quot;, the website will not upload the files until you upload a valid photo. <br></p>
+<p><img src="https://i.imgur.com/wQtOjCc.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Personal Upload Page</h6>
+<h3>Result Page</h3>
+<p>When you upload the photo successfully and click the thumbnail, the browser will access the result page and show you your original photo and the detected photo. 
+<img src="https://i.imgur.com/BGLhLeL.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Result Page</h6>
+<h3>Logout Page</h3>
+<p>After clicking on the logging out button on far right of the navigation bar, you will immediately log out of the system, if you wish to log in to your former using account, you could click on the &quot;Back to log in page&quot; hyperlink on the bottom of the left frame, which could directly lead you to the login page.
+<img src="https://i.imgur.com/FcFfR2d.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Logout Page</h6>
+<h2>Deverlopor's Reference</h2>
+<h3>Program development</h3>
+<h4>Programming environment</h4>
+<blockquote>
+<p>Programming language: <strong>Python 3.7</strong> <br>
+Web framework: <strong>Flask 0.11.1</strong> <br>
+Integrated Development Environment: <strong>PyCharm 2018.3.4 x64 bit</strong> <br>
+Database: <strong>Mysql 8.0</strong> <br>
+Server Connector: <strong>cygwin 2.11.2</strong> , <strong>TightVNC 2.8.11</strong> , <strong>FileZilla 3.40.0 x64 bit</strong><br>
+Browser: <strong>firefox 51.0.1 x64 bit</strong>(server), <strong>google chrome 70.0.3538.110 x64 bit</strong>(developer) <br></p>
+</blockquote>
+<h4>Program Structure</h4>
+<pre><code>FaceDetection                                         # Project directory
+├├ static                                              # Static file directory
+│└ picture                                            # Picture directory
+│ ├ raw_picture                                       # Raw picture directory
+│ ├ face_detected_picture                             # Detected picture directory
+│ └ thumbnail_picture                                 # Thumbnail directory
+│
+├ templates                                           # Web page file directory
+│├ registration_page.html
+│├ result_page.html
+│├ upload_page.html
+│├ uploadF_page.html
+│├ visit_page.html
+│├ welcome_page.html
+│└ logout_page.html
+├ venv                                                # Virtual environment directory
+├ . idea                                              # Support file directory (flask project)
+├ __pycache__                                         # Support file directory (flask project)
+├ app.py                                              # Main function
+├ faceDetection_function.py                           # Customized Module
+└ imageThumbnail_function.py                          # Customized Module
+</code></pre>
+
+<h4>Main Program</h4>
+<blockquote>
+<p>Open Module: <br></p>
+</blockquote>
+<pre><code>flask_sqlalchemy               #Connector that connects the flask and the Mysql
+flask_wtf &amp; wtforms            #Operator that reads the user's input from the web page
+flask_login                    #Operator that protects the user's security in the login permission
+werkzeug                       #Operator that protects the user's security in the data
+os                             #Operator that is used to obtain operating addresses in the system
+jinja2                         #Operator that writes the server's output to the web page
+OpenCV                         #Generator that generates the detected photo
+</code></pre>
+
+<blockquote>
+<p>Customized Module: <br></p>
+</blockquote>
+<pre><code>faceDetection_function         #The function can read the original photo and write the detected photo to the aimed address
+imageThumbnail_function        #The function can read the original photo and write the thumbnail to the aimed address
+</code></pre>
+
+<blockquote>
+<p>Customized Class: <br></p>
+</blockquote>
+<pre><code>WelcomeForm()                  #Define a WTF form for reading the user's input in the login page
+RegistrationForm()             #Define a WTF form for reading the user's input in the register page
+UploadForm()                   #Define a WTF form for reading the user's input in the personal upload page
+User()                         #Define a table form in the Mysql database
+</code></pre>
+
+<blockquote>
+<p>Customized Function: <br></p>
+</blockquote>
+<pre><code>user_loader()                  #The function can load the user for managing the login permission
+welcome_function()             #The routing function operates the input from the login page
+registration_function()        #The routing function operates the input from the register page
+visit_function()               #The routing function operates the input from the personal visit page
+result_function()              #The routing function operates the input from the personal result page
+upload_function()              #The routing function operates the input from the personal upload page
+uploadF_function()             #The routing function operates the input from the TA upload page
+</code></pre>
+
+<blockquote>
+<p>Templates: <br></p>
+</blockquote>
+<pre><code>Registration_page              #Display the register page
+result_page                    #Display the result page
+upload_page                    #Display the personal upload page
+uploadF_page                   #Display the upload page
+visit_page                     #Display the personal visit page
+welcome_page                   #Display the login page
+logout_page                    #Display the logout page
+</code></pre>
+
+<h4>Database</h4>
+<blockquote>
+<p>Service Name : <strong>Mysql@localhost:3306</strong> <br>
+Database name: <strong>faced</strong> <br>
+table name   : <strong>user</strong>  <br></p>
+</blockquote>
+<pre><code>| Column Name              | Data type    | Characteristic                          | Default |             # The structure of the table 'user'
+-----------------------------------------------------------------------------------------------
+| id                       | INT(11)      | Primary Key, Not Null, Auto Incremental |         |
+| name                     | VARCHAR(100) |                                         |  NULL   |
+| password                 | VARCHAR(100) |                                         |  NULL   |
+| photo_address_thumbnail  | VARCHAR(100) |                                         |  NULL   |
+| photo_address_detected   | VARCHAR(100) |                                         |  NULL   |
+| photo_address_raw        | VARCHAR(100) |                                         |  NULL   |
+| photo_count              | INT(11)      |                                         |  NULL   |
+</code></pre>
+
+<h4>Open Code</h4>
+<blockquote>
+<p>The open code is made public at the Github.</p>
+</blockquote>
+<p><a href="https://github.com/ChauserMondieu/ECE1779-Assignment1-remake">https://github.com/ChauserMondieu/ECE1779-Assignment1-remake</a></p>
+<h3>AWS Server development</h3>
+<h4>Create an AWS account</h4>
+<p>This part is intended for those who haven’t set up Amazon AWS accounts, for this project, please skip this section and go directly into the log-in instruction. <br></p>
+<blockquote>
+<p>Amazon Web Services (AWS) is a secure cloud services platform, offering compute power, database storage, content delivery and other functionality to help businesses scale and grow. In order to start cloud service in AWS cloud platform, you should come to visit <a href="https://aws.amazon.com/">Amazon official website</a> and sign up for one regular account. <br></p>
+</blockquote>
+<p>After signing up for the regular AWS account, log in to it and navigate to the Console interface. Click on the account name on the far-left button of the top navigate bar right next to a small bell icon, then choose “My account” option on the drop-down list. In “My account” interface, select and copy your regular account id under the category “Account Setting”, you may use this series of number linking your regular account to the AWS Educate account during the following processes. <br></p>
+<p>Then, enter the <a href="https://aws.amazon.com/education/awseducate/">AWS Educate website</a> and apply for one AWS Educate Account, later on paste your regular AWS account id into the input field, this process will automatically link your regular AWS account to the newly created AWS Educate account. After the connection, check your e-mail box for the confirmation mail from AWS team and after the activating procedure you’ll be able to use the AWS Educate account and launch cloud services in Amazon AWS</p>
+<h4>Log into an existing account</h4>
+<p>For the sake of fully accomplishing this project, we have set up one educational account in AWS. Try navigating to the signing-in <a href="https://www.awseducate.com/signin/SiteLogin">website</a> and log in with the following information:</p>
+<pre><code>Account name: Zhonghao.Li@mail.utoronto.ca
+Password: ece1779pass!
+</code></pre>
+
+<p><img src="https://i.imgur.com/ffychmm.jpg" alt="figure1" /></p>
+<h6 style="text-align: center;" markdown="1"> Login interface for AWS Educate Account</h6>
+<p>Once you’re in the navigation webpage of AWS Educate, try clicking on the far-left button <strong>My Classroom</strong> in the upper navigation bar entering the classroom interface, then click on the <strong>Go to classroom</strong> button in the right column of the existing chart.</p>
+<p><img src="https://i.imgur.com/tNMGA5L.png" alt="figure2" /></p>
+<h6 style="text-align: center;" markdown="1"> Clicking on "My Classroom" button on the top navigation bar</h6>
+<p><img src="https://i.imgur.com/jKiq60C.jpg" alt="figure3" /></p>
+<h6 style="text-align: center;" markdown="1">Clicking on the “go to classroom” button on the right column</h6>
+<p>In Vacareum welcoming interface, click on <strong>AWS console</strong> to navigate to the AWS console</p>
+<p><img src="https://i.imgur.com/8D2ykvr.jpg" alt="figure4" /></p>
+<h6 style="text-align: center;" markdown="1">Click on the “AWS Console”</h6>
+<h4>Activate the established EC2 instance</h4>
+<p>You are already there. While logging into the AWS Management Console, change the service section to <strong>N.Virginia</strong>, the switch button could be found in the middle of the top navigation bar. The next step for you is to click on the <strong>EC2</strong> services in the <strong>All Service</strong> directory and enter into the EC2 service control panel.</p>
+<p><img src="https://i.imgur.com/a9xA8JH.jpg" alt="figure5" /></p>
+<h6 style="text-align: center;" markdown="1">Click on the EC2 Service in the “All Service” Directory</h6>
+<p>Under the <strong>Resources</strong> section, click on the <strong>Running Instances</strong>, or just click on the <strong>Instances</strong> on the left navigation bar, this move will direct you into the page showing all the instances deploying in this account.</p>
+<p><img src="https://i.imgur.com/haMlJHz.jpg" alt="figure6" /></p>
+<h6 style="text-align: center;" markdown="1">Click on the “Instances” on the left navigation bar</h6>
+<p>From the control panel of all the instances deploying in this account, we can see one with the name <strong>Project-F</strong> (which is exactly the final Version of our web application project), and that is the one that we deploy our web application on. Now you can see that this instance is currently in stop state. We need to activate it. <strong>Select this instance</strong> and click on the <strong>action</strong> button on the top of the displaying chart, choose <strong>Instance State-&gt;Start</strong> in the drop-down list respectively and start the instance. </p>
+<p><img src="https://i.imgur.com/SaNNdEY.jpg" /></p>
+<h6 style="text-align: center;" markdown="1">Activate the selected instance</h6>
+<p>As we can see, in the Description panel, the security group of this instance is named <strong>launch-wizard-7</strong>, which is customized to open SSH transmission as well as to open port 5000 in TCP for connection from outside the instance. By activating the instance, it will be automatically dispatched one dynamic public DNS aka IP address, copy this IP address and save it for the further SSH remote connection use. </p>
+<h4>Connect to the instance via SSH and VNC</h4>
+<p>Now that we have already started the instance, the next step for us is to connect to it via secured data transmission channels. The key pair is named “instance_1” and is stored in the following directory of this project: </p>
+<blockquote>
+<p>directory of the .pem document</p>
+</blockquote>
+<p>in the contraction file. In this case we will use SSH to establish this data-transmitting tunnel. </p>
+<p>First, open your Cygwin Terminal and type in the following command code in order to familiarize your system with the storing directory of the key pair</p>
+<pre><code>% pwd
+% ls -alrth &quot;pem directory path&quot;
+% cp &quot;pem directory path&quot; .
+% chgrp Users &quot;pem document name&quot;
+% ls -alrth &quot;pem document name&quot;
+</code></pre>
+
+<blockquote>
+<p>Notice: substitute the current directory path of private key file “instance<em>1” for the sudo code “pem directory path”, and replace “pem document name” with “instance</em>1.pem”</p>
+</blockquote>
+<p>Then, with all preparation done, we could start the SSH connection with the code down below:</p>
+<pre><code>% ssh -i key pair doc.pem ubuntu@Public DNS (IPv4) -L port number :localhost: port number
+</code></pre>
+
+<p>One example could be:</p>
+<pre><code>% ssh -i instance_1.pem ubuntu@ec2-3-80-135-112.compute-1.amazonaws.com -L 5001:localhost:5901
+</code></pre>
+
+<p><img src="https://i.imgur.com/YZNqxpG.jpg" alt="figure8" /></p>
+<h6 style="text-align: center;" markdown="1">SSH connection command input</h6>
+<p>Type <strong>yes</strong> upon the prompting line confirming admission of connection.</p>
+<p><img src="https://i.imgur.com/eJDqqVY.jpg" alt="figure9" /></p>
+<h6 style="text-align: center;" markdown="1">SSH connection succeed </h6>
+<blockquote>
+<p>The SSH connection is successfully established.</p>
+</blockquote>
+<p>After connecting with the instance via SSH, we could establish VNC in the instance and start manipulating via GUI. The needed application requirements are deployed in the instance aforehand. All we needed to do is to launch the VNC server in the instance by typing in:</p>
+<pre><code>% vncserver
+</code></pre>
+
+<p>The instance will automatically launch the vnc service pre-deployed in it.</p>
+<p><img src="https://i.imgur.com/EtJPMZ2.jpg" alt="figure10" /></p>
+<h6 style="text-align: center;" markdown="1">VNC service is launched in the instance</h6>
+<p>Next, open <strong>TightVNC</strong>, fill in the inbound port of the instance (in this case is <strong>localhost::5001</strong>),  click on <strong>connect</strong> button, type in the connection password <strong>ece1779pass</strong>, after that you will be successfully log in to the instance with GUI in your PC.</p>
+<h4>Implement the project in the server</h4>
+<p>Now that we have set up our AWS instance and successfully connect to it, the next thing we should do is to deploy our well-developed application to the instance. We strongly recommend that all the applications be implemented off-line and then uploaded onto the cloud server as a project. The sole account for this is that it will save the time as well as the resources required for developing the target applications.</p>
+<p>In the former process, we have already set up the SSH connection between your local application-developing host and the AWS EC2 server. In this step, we will upload our project onto the cloud server taking full advantages of this SSH connection. There are two ways of data transmission via established SSH tunnel, the first one is using the <strong>scp</strong> command in the Command Line Interface (CLI), which is somehow tedious to manipulate due to the file managing system. In this documentation, we will go on the second option: using the third-party graphical interface AIDS application, to state one, FileZilla in this project.</p>
+<p>Launch <strong>FileZilla</strong> in the local host, create a new file transmission task, then fill in the boxes with information shown as follows:</p>
+<blockquote>
+<ol>
+<li>Choose SFTP-SSH FIle Transfer Potocol in the  <strong>Protocol</strong> box </br></li>
+<li>Copy the dynamic IP address into the <strong>Host</strong> box              </br></li>
+<li>Leave the <strong>Port</strong>  box balnk                                  </br></li>
+<li>Choose Normal in the <strong>Logon Type</strong>                            </br></li>
+<li>Fill in &quot;ubuntu&quot; in the <strong>User</strong> box                           </br></li>
+</ol>
+</blockquote>
+<p><img src="https://i.imgur.com/KWb2NgW.jpg" alt="Figure 1" /></p>
+<h6 style="text-align: center;" markdown="1">Settings of a new SSH file transmission</h6>
+<p>In order to meet the security standards of the SSH connection, we also need to assign the connection key pair to the SSH client. Select:</p>
+<blockquote>
+<p>Edit-&gt;Settings-&gt;SFTP</p>
+</blockquote>
+<p><img src="https://i.imgur.com/E8tfStX.jpg" alt="Figure 2" /></p>
+<h6 style="text-align: center;" markdown="1">Assign the key pair to the transmission task</h6>
+<p>Choose the directory location of the key pair <strong>instance_1.pem</strong>, then click </p>
+<blockquote>
+<p>Add key file</p>
+</blockquote>
+<p>Click <strong>connect</strong>. </p>
+<p>Now, all the settings are done for the file transmission between your local host and the AWS Cloud Server.<br>
+<img src="https://i.imgur.com/p73w7XQ.jpg" alt="Figure 3" /></p>
+<h6 style="text-align: center;" markdown="1">Interface after finishing the settings</h6>
+<p>From the interface above, you could just upload or download files to or from your AWS Cloud Server by simply dragging the items to the other side of the interface. Remember to choose the right directory before starting a new file transmission process.</p>
+<p>For simplicity, the main file of the web application are uploaded into the </p>
+<blockquote>
+<p>/home/ubuntu/Documents</p>
+</blockquote>
+<p>directory,while the boosting file of the application <strong>Start.sh</strong> is uploaded to the Desktop of the instance, whose directory path is </p>
+<blockquote>
+<p>/home/ubuntu/Desktop</p>
+</blockquote>
+<h5>Start the application</h5>
+<p>Open the Command Line Interface of the instance, then type in the following directive:</p>
+<pre><code>$ cd /home/ubuntu/Desktop
+$ ./Start.sh
+</code></pre>
+
+<p>After a while the application will fully execute in the instance, you could access to this web application outside from the instance as well. The instructions of this process is mentioned in the previous paragraphs.</p>
+<h5>Test on load generator</h5>
+<p>The application has been tested on the load generator. The load generator file is &quot;LoadGenertor&quot; which contains &quot;gen.py&quot; script. They have been deployed in Github. The command for the terminal console is &quot;python gen.py http://100.25.213.81:5000/api/upload Tom 123 1 ./picture/ 15&quot;. The account &quot;Tom&quot; has not uploaded anything before. The response of the terminal console is shown below:
+<img src="https://i.imgur.com/3y57VJ8.png" /></p>
+<p>The response of the application is shown below:
+<img src="https://i.imgur.com/yhR9Sij.jpg" />
+<img src="https://i.imgur.com/pHUnsHq.jpg" /></p>
+<hr><p>@ Copyright 2019, Zhonghao Li &amp; Botao Liu. Created using Markdownpad 2</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
