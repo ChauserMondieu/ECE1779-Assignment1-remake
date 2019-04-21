@@ -8,7 +8,7 @@ Author:     Name:        Id:          email address
 
 Note:
 When the 'DOCUMENTATION.md' file was converted to the 'DOCUMENTATION.pdf' file, some of the layout of the 'DOCUMENTATION.md' file was modified.
-The complete documentation file is shown in ''https://github.com/ChauserMondieu/ECE1779-A1'' namely ''README.md''. Or, ''DOCUMENTATION.html'' is
+The complete documentation file is shown in ''https://github.com/ChauserMondieu/ECE1779-Assignment1-remake'' namely ''README.md''. Or, ''DOCUMENTATION.html'' is
 avaliable as well.
 
 AWS account:
